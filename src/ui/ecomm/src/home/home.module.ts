@@ -4,14 +4,15 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { MainComponent } from './component/main/main.component';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { SearchModule } from 'src/search/search.module';
 
 @NgModule({
   declarations: [MainComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
-    BrowserModule
+    BrowserModule,
+    SearchModule
   ],
   bootstrap:[MainComponent]
 })
