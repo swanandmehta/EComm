@@ -6,6 +6,7 @@ import { MainComponent } from './component/main/main.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { SearchModule } from 'src/search/search.module';
 import { BannerModule } from 'src/banner/banner.module';
+import { MenuModule } from 'src/menu/menu.module';
 
 @NgModule({
   declarations: [MainComponent],
@@ -14,7 +15,8 @@ import { BannerModule } from 'src/banner/banner.module';
     HomeRoutingModule,
     BrowserModule,
     SearchModule,
-    BannerModule
+    BannerModule,
+    MenuModule
   ],
   bootstrap:[MainComponent]
 })
