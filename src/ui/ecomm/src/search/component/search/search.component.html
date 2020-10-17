@@ -1,17 +1,9 @@
-<mat-grid-list cols="100" rowHeight="60px">
-    <mat-grid-tile [colspan]="3">
-        <fa-icon class="fa fa-2x fa-icon" [icon]="menuIcon"></fa-icon>
-    </mat-grid-tile>
+<div id="search-header" class="row col-12 p-0 m-0">
+    <fa-icon class="fa fa-2x fa-icon d-inline my-auto mx-3" [icon]="menuIcon"></fa-icon>
 
-    <mat-grid-tile [colspan]="91">
-        <img id="logo-header" src='../../../assets/logo-header.png'>
-    </mat-grid-tile>
+    <img id="logo-header" class="d-block mx-auto" src='../../../assets/logo-header.png'>
 
-    <mat-grid-tile [colspan]="3">
-        <fa-icon class="fa fa-2x fa-icon" [icon]="searchIcon"></fa-icon>
-    </mat-grid-tile>
+    <fa-icon class="fa fa-2x fa-icon d-inline my-auto mx-3" [icon]="searchIcon"></fa-icon>
 
-    <mat-grid-tile [colspan]="3">
-        <fa-icon class="fa fa-2x fa-icon" [icon]="cartIcon"></fa-icon>
-    </mat-grid-tile>
-</mat-grid-list>
+    <fa-icon class="fa fa-2x fa-icon d-block my-auto mx-3" [icon]="cartIcon"></fa-icon>
+</div>
