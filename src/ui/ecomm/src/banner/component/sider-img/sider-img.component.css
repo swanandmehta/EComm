@@ -1,0 +1,6 @@
+.slider-img {
+    height: 450px;
+    width: 100vw;
+    object-fit: cover;
+    z-index: 0;
+}

@@ -1,0 +1,11 @@
+<div [ngClass]="{'align-left': location === 'LEFT',
+                    'align-right': location === 'RIGHT',
+                    'align-center': location === 'CENTER'}">
+    <div class="slider-header" *ngIf="headerText != null">
+        <h1 class="slider-header-text">{{headerText}}</h1>
+    </div>
+
+    <div class="slider-button" *ngIf="buttonText != null">
+        <button mat-raised-button>{{buttonText}}</button>
+    </div>
+</div>

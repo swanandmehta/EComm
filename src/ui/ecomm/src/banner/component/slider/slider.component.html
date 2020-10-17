@@ -1,0 +1,10 @@
+<app-sider-img [src]="src"></app-sider-img>
+<app-sider-nav [showNav]="showNav" 
+    (onNavAction)="onBannerChanged($event)"
+    [img]="imgConfigList" 
+    [index]="index"></app-sider-nav>
+<app-sider-placeholder 
+    [btnText]="btnText" 
+    [btnSrc]="btnSrc" 
+    [headerText]="headerText" 
+    [position]="position"></app-sider-placeholder>

@@ -1,0 +1,19 @@
+<div class="slider-nav" *ngIf="isNavEnabled === true">
+    <p class="slider-location">
+        <span class="location-icon-container">
+            <fa-icon *ngFor="let imgConfig of imgConfigList; let imgIndex = index " 
+                (click)="moveToBanner(imgIndex)"
+                class="fa fa-location-icon" 
+                [icon]="imgIndex == currentImgIndex ? currentLocationIcon : locationIcon"></fa-icon>
+        </span>
+    </p>
+
+    <span (click)="previous()">
+        <fa-icon id="slider-previous"  class="fa fa-slider-icon" [icon]="previousIcon"></fa-icon>
+    </span>
+
+    <span (click)="next()">
+        <fa-icon id="slider-next" class="fa fa-slider-icon" [icon]="nextIcon"></fa-icon>
+    </span>
+
+</div>
