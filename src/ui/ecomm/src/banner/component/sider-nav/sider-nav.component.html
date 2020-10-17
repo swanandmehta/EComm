@@ -1,19 +1,23 @@
-<div class="slider-nav" *ngIf="isNavEnabled === true">
-    <p class="slider-location">
-        <span class="location-icon-container">
-            <fa-icon *ngFor="let imgConfig of imgConfigList; let imgIndex = index " 
-                (click)="moveToBanner(imgIndex)"
-                class="fa fa-location-icon" 
-                [icon]="imgIndex == currentImgIndex ? currentLocationIcon : locationIcon"></fa-icon>
-        </span>
-    </p>
+<div id="slider-nav" class="row col-12 p-0 m-0" *ngIf="isNavEnabled === true">
 
-    <span (click)="previous()">
-        <fa-icon id="slider-previous"  class="fa fa-slider-icon" [icon]="previousIcon"></fa-icon>
+    <fa-icon
+        (click)="previous()" 
+        class="fa fa-slider-icon py-3 px-2 d-inline" 
+        [icon]="previousIcon">
+    </fa-icon>
+
+    <span class="location-icon-container p-2 my-auto mx-auto d-block">
+        <fa-icon *ngFor="let imgConfig of imgConfigList; let imgIndex = index " 
+            (click)="moveToBanner(imgIndex)"
+            class="p-2"
+            [icon]="imgIndex == currentImgIndex ? currentLocationIcon : locationIcon">
+        </fa-icon>
     </span>
 
-    <span (click)="next()">
-        <fa-icon id="slider-next" class="fa fa-slider-icon" [icon]="nextIcon"></fa-icon>
-    </span>
+    <fa-icon 
+        (click)="next()" 
+        class="fa fa-slider-icon py-3 px-2 d-inline" 
+        [icon]="nextIcon">
+    </fa-icon>
 
 </div>

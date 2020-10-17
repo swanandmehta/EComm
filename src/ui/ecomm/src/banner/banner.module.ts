@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BannerComponent } from './component/banner/banner.component';
-import { MatGridListModule } from '@angular/material/grid-list';
 import { MatButtonModule } from '@angular/material/button';
 import { SliderComponent } from './component/slider/slider.component';
 import { SiderImgComponent } from './component/sider-img/sider-img.component';
@@ -15,7 +14,6 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   declarations: [BannerComponent, SliderComponent, SiderImgComponent, SiderNavComponent, SiderPlaceholderComponent],
   imports: [
     CommonModule,
-    MatGridListModule,
     FontAwesomeModule,
     MatButtonModule
   ],

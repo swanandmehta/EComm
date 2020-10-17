@@ -1,11 +1,23 @@
-<div [ngClass]="{'align-left': location === 'LEFT',
-                    'align-right': location === 'RIGHT',
-                    'align-center': location === 'CENTER'}">
-    <div class="slider-header" *ngIf="headerText != null">
-        <h1 class="slider-header-text">{{headerText}}</h1>
-    </div>
-
-    <div class="slider-button" *ngIf="buttonText != null">
-        <button mat-raised-button>{{buttonText}}</button>
+<div id="slider-placeholder" class="row col-12 p-0 m-0">
+    <div class="col-12 m-0" [ngClass]="{'align-left': location === 'LEFT',
+                                            'align-right': location === 'RIGHT',
+                                            'align-center': location === 'CENTER'}">
+        <h1 *ngIf="headerText != null" class="col-12 p-0 pb-5 m-0 slider-text">{{headerText}}</h1>
+        <button *ngIf="buttonText != null" mat-raised-button>{{buttonText}}</button>
     </div>
 </div>
+<!--
+<div >
+    <div id="slider-placeholder" [ngClass]="{'align-left': location === 'LEFT',
+                        'align-right': location === 'RIGHT',
+                        'align-center': location === 'CENTER'}">
+        <div class="slider-header" *ngIf="headerText != null">
+            <h1 class="slider-header-text">{{headerText}}</h1>
+        </div>
+
+        <div class="slider-button" *ngIf="buttonText != null">
+            <button mat-raised-button>{{buttonText}}</button>
+        </div>
+    </div>
+</div>
+-->

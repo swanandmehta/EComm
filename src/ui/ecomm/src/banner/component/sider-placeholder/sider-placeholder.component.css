@@ -1,31 +1,31 @@
-.slider-header {
-    position: relative;
-    top: -250px;
+#slider-placeholder {
+    position: absolute;
+    top: 250px;
+    z-index: 2;
 }
 
-.slider-header-text {
+.slider-text {
     text-align: inherit;
     font-size: 35px;
     font-weight: 500;
-}
-
-.slider-button {
-    position: relative;
-    top: -250px;
+    z-index: 2;
 }
 
 .align-left {
     float: left;
     text-align: left;
+    z-index: 2;
 }
 
 .align-right {
     float: right;
     text-align: right;
+    z-index: 2;
 }
 
 .align-center {
     padding-left: 30vw;
     padding-right: 30vw;
-    text-align: center;    
+    text-align: center;
+    z-index: 2;    
 }
