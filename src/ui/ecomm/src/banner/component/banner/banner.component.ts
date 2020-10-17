@@ -13,37 +13,37 @@ export class BannerComponent implements OnInit {
 
   constructor() {
     this.sliderImgList = [];
-    let c1 = new BannerConfig("../../../assets/banner1.jpg", true, true);
+    let c1 = new BannerConfig("../../../assets/img/banner1.jpg", true, true);
     c1.btnSrc = "https://www.google.com";
     c1.btnText = "www.google.com";
     c1.headerText = "This button will take you to google";
     c1.position = BannerTextPosition.CENTER;
 
-    let c2 = new BannerConfig("../../../assets/banner2.jpg", true, true);
+    let c2 = new BannerConfig("../../../assets/img/banner2.jpg", true, true);
     c2.btnSrc = "https://www.google.com";
     c2.btnText = "www.google.com";
     c2.headerText = "This button will take you to google";
     c2.position = BannerTextPosition.LEFT;
 
-    let c3 = new BannerConfig("../../../assets/banner3.jpg", true, true);
+    let c3 = new BannerConfig("../../../assets/img/banner3.jpg", true, true);
     c3.btnSrc = "https://www.google.com";
     c3.btnText = "www.google.com";
     c3.headerText = "This button will take you to google";
     c3.position = BannerTextPosition.RIGHT;
 
-    let c4 = new BannerConfig("../../../assets/banner4.jpg", true, true);
+    let c4 = new BannerConfig("../../../assets/img/banner4.jpg", true, true);
     c4.btnSrc = "https://www.google.com";
     c4.btnText = "www.google.com";
     c4.headerText = "This button will take you to google";
     c4.position = BannerTextPosition.LEFT;
 
-    let c5 = new BannerConfig("../../../assets/banner5.jpeg", true, true);
+    let c5 = new BannerConfig("../../../assets/img/banner5.jpeg", true, true);
     c5.btnSrc = "https://www.google.com";
     c5.btnText = "www.google.com";
     c5.headerText = "This button will take you to google";
     c5.position = BannerTextPosition.RIGHT;
 
-    let c6 = new BannerConfig("../../../assets/banner6.jpeg", true, true);
+    let c6 = new BannerConfig("../../../assets/img/banner6.jpeg", true, true);
     c6.btnSrc = "https://www.google.com";
     c6.btnText = "www.google.com";
     c6.headerText = "This button will take you to google";
