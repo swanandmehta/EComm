@@ -1,1 +1,7 @@
-<p>menu-container works!</p>
+<div id="menuContainer" class="row col-12 p-0 m-0">
+    <div class="col p-3" 
+        [ngClass]="{'menu-highlight': selected != null && selected.name == menu.name }" 
+        *ngFor="let menu of menuList">
+        <app-menu-option [menu]="menu" [selected]="selected"></app-menu-option>
+    </div>
+</div>

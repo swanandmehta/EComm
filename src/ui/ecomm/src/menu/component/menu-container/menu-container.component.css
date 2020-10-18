@@ -1,0 +1,7 @@
+#menuContainer {
+    background-color: black;
+}
+
+.menu-highlight {
+    border-bottom: 5px solid lightgray;
+}
