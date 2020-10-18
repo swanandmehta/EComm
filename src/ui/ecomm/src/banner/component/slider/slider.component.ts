@@ -10,7 +10,7 @@ import { BannerTextPosition } from 'src/banner/common/enum/BannerTextPosition/ba
 export class SliderComponent implements OnInit {
 
   @Input("img")
-  public imgConfigList: Array<BannerConfig> = [];
+  public imgConfigList: Array<BannerConfig>;
 
   public src: string = null;
   public btnText: string = null;
@@ -23,6 +23,8 @@ export class SliderComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.index++;
+    this.changeBanner();
     this.startSlideShow();
   }
 

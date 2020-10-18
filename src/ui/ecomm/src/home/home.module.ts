@@ -7,6 +7,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { SearchModule } from 'src/search/search.module';
 import { BannerModule } from 'src/banner/banner.module';
 import { MenuModule } from 'src/menu/menu.module';
+import { ShowcaseModule } from 'src/showcase/showcase.module';
 
 @NgModule({
   declarations: [MainComponent],
@@ -16,7 +17,8 @@ import { MenuModule } from 'src/menu/menu.module';
     BrowserModule,
     SearchModule,
     BannerModule,
-    MenuModule
+    MenuModule,
+    ShowcaseModule
   ],
   bootstrap:[MainComponent]
 })

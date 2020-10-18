@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShowcaseConfig } from 'src/showcase/common/dto/ShowcaseConfig/showcase-config';
 
 @Component({
   selector: 'app-main',
@@ -7,7 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor() { }
+  public featured: ShowcaseConfig;
+
+  constructor() {
+    this.featured = new ShowcaseConfig("Featured", 4);
+  }
 
   ngOnInit(): void {
   }

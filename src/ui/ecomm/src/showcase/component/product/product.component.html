@@ -1,0 +1,29 @@
+<div class="row col-12 p-0 m-0 product">
+    <img class="productImg col-12 p-0 m-0" src="{{img}}">
+
+    <div *ngIf="product.onSale == true">
+        <div class="sale-icon p-0 m-0"></div>
+        <p class="sale-text p-0 m-0">Sale</p>
+    </div>
+
+    <div class="product-details h-100 w-100">
+        <div class="col-12 mx-auto my-auto">
+            <p class="p-0 py-2 m-0 product-name">{{product.name}}</p>
+            <div class="py-2" *ngIf="product.onSale == true">
+                <s class="p-0 m-0 d-inline product-price">{{product.currency}}{{product.price}}</s>
+                <p class="p-0 m-0 d-inline sale-price product-price"> now at
+                    {{product.currency}}{{product.price - product.discount}}</p>
+            </div>
+            <div class="py-2" *ngIf="product.onSale == false">
+                <p class="p-0 m-0 product-price" *ngIf="product.onSale == false">{{product.currency}}{{product.price}}
+                </p>
+            </div>
+            <p class="p-0 m-0 product-status">{{product.status}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="product-img-nav w-100 p-2">
+    <fa-icon (click)="previous()" class="previous p-0 m-0 py-3 px-2" [icon]="previousIcon"></fa-icon>
+    <fa-icon (click)="next()" class="next p-0 m-0 py-3 px-2" [icon]="nextIcon"></fa-icon>
+</div>
