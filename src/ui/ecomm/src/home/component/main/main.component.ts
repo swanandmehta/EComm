@@ -8,10 +8,8 @@ import { ShowcaseConfig } from 'src/showcase/common/dto/ShowcaseConfig/showcase-
 })
 export class MainComponent implements OnInit {
 
-  public featured: ShowcaseConfig;
-
   constructor() {
-    this.featured = new ShowcaseConfig("Featured", 4);
+
   }
 
   ngOnInit(): void {

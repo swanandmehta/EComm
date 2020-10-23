@@ -1,0 +1,10 @@
+.footer-policy-text{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.footer-policy-text:hover{
+    font-size: 15px;
+    font-weight: 800;
+    transition: 500ms;
+}

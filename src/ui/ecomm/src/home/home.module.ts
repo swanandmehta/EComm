@@ -1,26 +1,31 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations/';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { MainComponent } from './component/main/main.component';
-import { BrowserModule } from '@angular/platform-browser';
-import { SearchModule } from 'src/search/search.module';
 import { BannerModule } from 'src/banner/banner.module';
 import { MenuModule } from 'src/menu/menu.module';
 import { ShowcaseModule } from 'src/showcase/showcase.module';
 import { IntroductionModule } from 'src/introduction/introduction.module';
+import { HomeComponent } from './component/home/home.component';
+import { FooterModule } from 'src/footer/footer.module';
+import { HeaderModule } from 'src/header/header.module';
 
 @NgModule({
-  declarations: [MainComponent],
+  declarations: [MainComponent, HomeComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
     BrowserModule,
-    SearchModule,
+    BrowserAnimationsModule,
     BannerModule,
     MenuModule,
     ShowcaseModule,
-    IntroductionModule
+    IntroductionModule,
+    FooterModule,
+    HeaderModule
   ],
   bootstrap:[MainComponent]
 })

@@ -1,0 +1,8 @@
+.footer-payment {
+    color: darkgray;
+}
+
+.footer-payment:hover{
+    color: black;
+    transition: 500ms;
+}

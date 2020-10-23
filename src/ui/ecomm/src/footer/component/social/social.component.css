@@ -1,0 +1,8 @@
+.footer-social {
+    color: darkgray;
+}
+
+.footer-social:hover{
+    color: black;
+    transition: 500ms;
+}

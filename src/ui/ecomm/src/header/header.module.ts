@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SearchComponent } from './component/search/search.component';
+import { HeaderComponent } from './component/header/header.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
 @NgModule({
-  declarations: [SearchComponent],
+  declarations: [HeaderComponent],
   imports: [
     CommonModule,
     FontAwesomeModule
   ],
-  exports: [SearchComponent]
+  exports: [HeaderComponent]
 })
-export class SearchModule { }
+export class HeaderModule { }
