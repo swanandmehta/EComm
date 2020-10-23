@@ -55,7 +55,6 @@ export class ShowcaseComponent implements OnInit {
 
 
     this.productList.push(product1);
-    this.productList.push(product2);
     this.productList.push(product3);
     this.productList.push(product4);
     this.productList.push(product5);

@@ -8,6 +8,7 @@ import { SearchModule } from 'src/search/search.module';
 import { BannerModule } from 'src/banner/banner.module';
 import { MenuModule } from 'src/menu/menu.module';
 import { ShowcaseModule } from 'src/showcase/showcase.module';
+import { IntroductionModule } from 'src/introduction/introduction.module';
 
 @NgModule({
   declarations: [MainComponent],
@@ -18,7 +19,8 @@ import { ShowcaseModule } from 'src/showcase/showcase.module';
     SearchModule,
     BannerModule,
     MenuModule,
-    ShowcaseModule
+    ShowcaseModule,
+    IntroductionModule
   ],
   bootstrap:[MainComponent]
 })
