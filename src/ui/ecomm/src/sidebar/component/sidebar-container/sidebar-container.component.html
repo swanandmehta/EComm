@@ -1,0 +1,24 @@
+<div id="sidebar" class="col-12 p-2">
+
+    <div class="row p-0 py-2 m-0">
+        <p class="col-12 p-0 m-0 text-right">
+            <fa-icon class="d-inline fa-2x" [icon]="closeIcon" (click)="close()"></fa-icon>
+        </p>
+    </div>
+
+    <div class="p-0 py-2 m-0">
+        <app-sidebar-main-option *ngFor="let option of config.category" [option]="option"></app-sidebar-main-option>
+    </div>
+    
+
+    <div class="p-0 py-2 m-0">
+        <app-sidebar-option *ngFor="let option of config.extra" [option]="option"></app-sidebar-option>
+    </div>
+
+    <div class="row py-0 m-0">
+        <p class="col-12 p-0 m-0 text-center">
+            <fa-icon class="d-inline fa-2x px-2" [icon]="option.icon" *ngFor="let option of config.social"></fa-icon>
+        </p>
+    </div>
+
+</div>

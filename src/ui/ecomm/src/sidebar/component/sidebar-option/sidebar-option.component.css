@@ -1,0 +1,8 @@
+.sidebar-sub-option {
+    font-size: 18px;
+}
+
+.sidebar-sub-option:hover{
+    font-weight: 500;
+    transition: 500ms;
+}

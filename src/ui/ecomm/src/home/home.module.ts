@@ -12,6 +12,8 @@ import { IntroductionModule } from 'src/introduction/introduction.module';
 import { HomeComponent } from './component/home/home.component';
 import { FooterModule } from 'src/footer/footer.module';
 import { HeaderModule } from 'src/header/header.module';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { SidebarModule } from 'src/sidebar/sidebar.module';
 
 @NgModule({
   declarations: [MainComponent, HomeComponent],
@@ -25,7 +27,9 @@ import { HeaderModule } from 'src/header/header.module';
     ShowcaseModule,
     IntroductionModule,
     FooterModule,
-    HeaderModule
+    HeaderModule,
+    MatSidenavModule,
+    SidebarModule
   ],
   bootstrap:[MainComponent]
 })

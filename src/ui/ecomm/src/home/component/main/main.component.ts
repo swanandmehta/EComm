@@ -15,4 +15,8 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  test(test): void {
+    console.log(test);
+  }
+
 }

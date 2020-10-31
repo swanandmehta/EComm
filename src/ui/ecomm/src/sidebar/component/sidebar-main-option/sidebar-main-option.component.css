@@ -1,0 +1,18 @@
+.sidebar-main-option {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.sidebar-main-option:hover{
+    font-weight: 800;
+    transition: 500ms;
+}
+
+.sidebar-sub-option {
+    font-size: 18px;
+}
+
+.sidebar-sub-option:hover{
+    font-weight: 500;
+    transition: 500ms;
+}
