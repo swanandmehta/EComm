@@ -14,8 +14,8 @@ export class IntroductionComponent implements OnInit {
   public newsletterConfig: NewsletterConfig;
 
   constructor() {
-    let header: string = "Re+Co. is a showcase of the Boundless theme by Shopify";
-    let text: string = "Product photography has been provided by Baby & Company, a curated collection of apparel and accessory designs from around the world.";
+    let header: string = "TEST is a showcase of the Boundless theme by ABCD";
+    let text: string = "Product photography has been provided by GOOGLE, a curated collection of apparel and accessory designs from around the world.";
     let img: string = "../../../assets/img/storefront.jpg";
     let address: string = "2321 Queen St. W. Toronto, Canada.";
     let timing: string = "Everyday, 9am – 9pm";
