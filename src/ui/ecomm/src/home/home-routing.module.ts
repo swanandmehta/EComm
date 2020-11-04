@@ -17,6 +17,16 @@ const routes: Routes = [
     path: "product/:id",
     pathMatch: "full",
     loadChildren: () => import("src/product/product.module").then(module => module.ProductModule)
+  },
+  {
+    path: "showcase/:showcase",
+    pathMatch: "full",
+    loadChildren: () => import("src/product/product.module").then(module => module.ProductModule)
+  },
+  {
+    path: "showcase/:showcase/tag/:tag",
+    pathMatch: "full",
+    loadChildren: () => import("src/product/product.module").then(module => module.ProductModule)
   }
 ];
 

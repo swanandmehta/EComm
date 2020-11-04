@@ -1,13 +1,13 @@
 <div class="row col-12 p-0 px-1 m-0">
     <p class="sidebar-main-option col-12 p-0 py-2 m-0">
-        {{option.text}}
+        <span class="p-0 m-0" (click)="openShowcase(option.text)">{{option.text}}</span>
         <fa-icon *ngIf="option.showSubCategoryOption == true" class="sidebar-main-option p-0 m-0 float-right"
             (click)="showOption()"
             [icon]="icon"></fa-icon>
     </p>
 
     <div *ngIf="isOpen == true" class="p-0 pl-4 m-0">
-        <p class="sidebar-sub-option col-12 p-0 py-2 m-0" *ngFor="let category of option.subCategory">
+        <p class="sidebar-sub-option col-12 p-0 py-2 m-0" (click)="openCategory(option.text, category.text)" *ngFor="let category of option.subCategory">
             {{category.text}}
         </p>
     </div>
