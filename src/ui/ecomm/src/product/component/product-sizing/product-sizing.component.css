@@ -1,0 +1,17 @@
+.product-name {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.sale-price{
+    color: #d69b2d;
+}
+
+.product-selector {
+    width: 100%;
+}

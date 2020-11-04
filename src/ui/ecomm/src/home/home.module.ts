@@ -14,6 +14,7 @@ import { FooterModule } from 'src/footer/footer.module';
 import { HeaderModule } from 'src/header/header.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SidebarModule } from 'src/sidebar/sidebar.module';
+import { ProductModule } from 'src/product/product.module';
 
 @NgModule({
   declarations: [MainComponent, HomeComponent],

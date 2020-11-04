@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from 'src/showcase/common/dto/Product/product';
 import { IconDefinition, faGreaterThan, faLessThan } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-product',
@@ -17,7 +18,7 @@ export class ProductComponent implements OnInit {
 
   private index: number = 0;
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.img = this.product.imgList[this.index];
@@ -32,17 +33,21 @@ export class ProductComponent implements OnInit {
   }
 
   private moveImage(index: number): void {
-    if(index < 0){
+    if (index < 0) {
       index = this.product.imgList.length - 1;
     }
 
-    if(index >= this.product.imgList.length){
+    if (index >= this.product.imgList.length) {
       index = 0;
     }
 
     this.img = this.product.imgList[index];
     this.index = index;
 
+  }
+
+  public navigate(): void {
+    this.router.navigateByUrl("product/"+this.product.id);
   }
 
 }

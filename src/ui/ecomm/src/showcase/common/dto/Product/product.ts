@@ -1,6 +1,7 @@
 import { ProductStatus } from '../../enum/product-status.enum';
 
 export class Product {
+    id: number = 0;
     name: string;
     onSale?: boolean = false;
     discount?: number = 0.0;

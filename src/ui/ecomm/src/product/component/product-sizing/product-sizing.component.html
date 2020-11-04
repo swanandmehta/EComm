@@ -1,0 +1,25 @@
+<div class="row col-12 p-0 m-0">
+    <form [formGroup]="form" class="p-0 m-0">
+        <p class="product-name">{{product.name}}</p>
+        <mat-form-field class="product-selector" *ngFor="let selector of product.options">
+            <input type="text" placeholder="{{selector.name}}" aria-label="{{selector.name}}" matInput
+                formControlName="{{selector.name}}" [matAutocomplete]="auto">
+            <mat-autocomplete autoActiveFirstOption="true" #auto="matAutocomplete">
+                <mat-option *ngFor="let option of options[selector.name] | async" [value]="option.value">
+                    {{option.display}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+
+        <div *ngIf="product.onSale == true; then sale else normal"></div>
+
+        <ng-template #sale>
+            <p class="product-price pt-1"><del>{{product.currency}}{{product.price}}</del> <span class="sale-price"> now at
+                    {{product.currency}}{{product.price - product.discount}}</span></p>
+        </ng-template>
+
+        <ng-template #normal>
+            <p class="product-price pt-1">{{product.currency}}{{product.price}}</p>
+        </ng-template>
+    </form>
+</div>

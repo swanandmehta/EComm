@@ -1,0 +1,12 @@
+<div class="row col-12 p-0 m-0 pt-3">
+    <p class="social-tagline col-12 p-0 m-0 py-2">Share your love...</p>
+    <p class="social-element-listing col-12 p-0 m-0 py-2">
+        <span class="p-0 m-0 d-inline pr-3" *ngFor="let social of product.social">
+            <fa-icon *ngIf="social.type == 'FB'" class="fa fa-2x social-element" [icon]="facebookIcon"></fa-icon>
+            <fa-icon *ngIf="social.type == 'INSTAGRAM'" class="fa fa-2x social-element" [icon]="instagramIcon"></fa-icon>
+            <fa-icon *ngIf="social.type == 'REDDIT'" class="fa fa-2x social-element" [icon]="reditIcon"></fa-icon>
+            <fa-icon *ngIf="social.type == 'TWITTER'" class="fa fa-2x social-element" [icon]="twitterIcon"></fa-icon>
+            <fa-icon *ngIf="social.type == 'YOUTUBE'" class="fa fa-2x social-element" [icon]="youtubeIcon"></fa-icon>
+        </span>
+    </p>
+</div>

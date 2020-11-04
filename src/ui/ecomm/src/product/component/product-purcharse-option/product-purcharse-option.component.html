@@ -1,0 +1,11 @@
+<div class="row col-12 p-0 m-0">
+    <div *ngIf="product.quantity > 0; then avaliable else soldout"></div>
+    <ng-template #avaliable>
+        <button class="btn btn-block" mat-raised-button color="primary">Add to cart</button>
+        <button class="btn btn-block" mat-raised-button color="primary">Buy it now</button>
+    </ng-template>
+
+    <ng-template #soldout>
+        <button class="btn btn-block" mat-raised-button color="primary" disabled>Sold out</button>
+    </ng-template>
+</div>
