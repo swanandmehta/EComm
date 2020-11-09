@@ -33,6 +33,11 @@ const routes: Routes = [
     path: "login",
     pathMatch: "full",
     loadChildren: () => import("src/login/login.module").then(module => module.LoginModule)
+  },
+  {
+    path: "create-account",
+    pathMatch: "full",
+    loadChildren: () => import("src/register/register.module").then(module => module.RegisterModule)
   }
 ];
 
