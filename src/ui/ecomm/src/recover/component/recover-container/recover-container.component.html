@@ -1,0 +1,34 @@
+<div id="recover" class="row justify-content-center p-0 m-0">
+    <div class="col-3 p-0 py-5 m-0">
+        <form [formGroup]="recoverForm">
+            
+            <p class="col-12 p-0 py-2 m-0 recover-title text-center">Reset your password</p>
+            
+            <p class="col-12 p-0 py-2 m-0 recover-subtext text-center">We will send you an email to reset your password.</p>
+
+            <div class="col-12 p-0 py-2 m-0">
+                <mat-form-field class="w-100">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput formControlName="email" placeholder="Ex. username@domain.com">
+                    <mat-error
+                        *ngIf="recoverForm.controls.email.hasError('email') && !recoverForm.controls.email.hasError('required')">
+                        Please enter a valid Email
+                    </mat-error>
+                    <mat-error *ngIf="recoverForm.controls.email.hasError('required')">
+                        Email is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="col-12 p-0 py-2 m-0">
+                <button class="btn-block recover-btn p-1" mat-raised-button color="primary">Create Account</button>
+            </div>
+
+            <p class="col-12 p-0 m-0 py-2 recover-link text-center" (click)="onReturn()">Return to Store</p>
+
+            <p class="col-12 p-0 m-0 py-2 recover-link text-center" (click)="onCreate()">Create an account</p>
+            
+
+        </form>
+    </div>
+</div>

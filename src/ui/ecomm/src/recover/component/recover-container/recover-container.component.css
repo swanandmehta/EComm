@@ -1,0 +1,27 @@
+#recover {
+    height: 70vh;
+}
+
+.recover-title {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.recover-subtext {
+    font-size: 15px;
+}
+
+.recover-link {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.recover-link:hover {
+    transition: 500ms;
+    color: rgb(124, 124, 124)
+}
+
+.recover-btn {
+    font-size: 18px;
+    outline: none;
+}

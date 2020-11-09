@@ -38,6 +38,11 @@ const routes: Routes = [
     path: "create-account",
     pathMatch: "full",
     loadChildren: () => import("src/register/register.module").then(module => module.RegisterModule)
+  },
+  {
+    path: "recover",
+    pathMatch: "full",
+    loadChildren: () => import("src/recover/recover.module").then(module => module.RecoverModule)
   }
 ];
 
