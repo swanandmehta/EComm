@@ -1,13 +1,19 @@
 <div class="row p-0 m-0">
     <div class="col-12 p-0 m-0">
         <div class="row col-12 p-0 m-0">
-            <fa-icon class="fa-icon d-inline my-auto mx-3" (click)="onNavToggle()" [icon]="menuIcon"></fa-icon>
+            <p class="icon-container-size my-auto p-0 m-0">
+                <fa-icon class="fa-icon d-inline mx-3" (click)="onNavToggle()" [icon]="menuIcon"></fa-icon>
+            </p>
 
-            <img id="logo-header" class="d-block mx-auto" src='../../../assets/img/logo-header.png'>
+            <div class="logo-container p-0 m-0">
+                <img id="logo-header" class="d-block mx-auto" src='../../../assets/img/logo-header.png'>
+            </div>
 
-            <fa-icon class="fa-icon d-inline my-auto mx-3" [icon]="searchIcon"></fa-icon>
+            <p class="icon-container-size my-auto p-0 m-0 text-right">
+                <fa-icon class="fa-icon d-inline mx-3" [icon]="searchIcon"></fa-icon>
 
-            <fa-icon class="fa-icon d-inline my-auto mx-3" (click)="onCartToggle()" [icon]="cartIcon"></fa-icon>
+                <fa-icon class="fa-icon d-inline mx-3" (click)="onCartToggle()" [icon]="cartIcon"></fa-icon>
+            </p>
         </div>
     </div>
 </div>
