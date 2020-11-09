@@ -28,6 +28,11 @@ const routes: Routes = [
     path: "showcase/:showcase/tag/:tag",
     pathMatch: "full",
     loadChildren: () => ShowcaseModule
+  },
+  {
+    path: "login",
+    pathMatch: "full",
+    loadChildren: () => import("src/login/login.module").then(module => module.LoginModule)
   }
 ];
 

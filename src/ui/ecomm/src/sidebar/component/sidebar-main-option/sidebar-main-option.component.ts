@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { IconDefinition } from '@fortawesome/free-solid-svg-icons';
 import { MainCategoryOption } from 'src/sidebar/common/dto/MainCategoryOption/main-category-option';
 import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
@@ -13,10 +13,16 @@ export class SidebarMainOptionComponent implements OnInit {
 
   @Input("option")
   public option: MainCategoryOption;
+
+  @Output("onNavClose")
+  public onNavClose: EventEmitter<boolean>;
+
   public icon: IconDefinition = faPlus;
   public isOpen: boolean = false;
 
-  constructor(private router: Router) { }
+  constructor(private router: Router) { 
+    this.onNavClose = new EventEmitter<boolean>(false);
+  }
 
   ngOnInit(): void {
     this.evaulateIcon();
@@ -37,10 +43,12 @@ export class SidebarMainOptionComponent implements OnInit {
 
   public openCategory(showcase: string, tag: string): void {
     this.router.navigateByUrl("showcase/"+showcase+"/tag/"+tag);
+    this.onNavClose.emit(false);
   }
 
   public openShowcase(showcase: string): void {
     this.router.navigateByUrl("showcase/"+showcase);
+    this.onNavClose.emit(false);
   }
 
 

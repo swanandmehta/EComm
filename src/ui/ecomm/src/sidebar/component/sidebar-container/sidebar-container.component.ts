@@ -55,7 +55,7 @@ export class SidebarContainerComponent implements OnInit {
     this.categoryList.push(m6);
 
     this.extra = [];
-    let e1: SubCategoryOption = new SubCategoryOption("Login In", "Login In");
+    let e1: SubCategoryOption = new SubCategoryOption("login", "Login In");
     let e2: SubCategoryOption = new SubCategoryOption("Create Account", "Create Account");
     let e3: SubCategoryOption = new SubCategoryOption("Shipping & Return", "Shipping & Return");
     let e4: SubCategoryOption = new SubCategoryOption("Sizing Information", "Sizing Information");
