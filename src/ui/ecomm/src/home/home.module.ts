@@ -14,7 +14,7 @@ import { FooterModule } from 'src/footer/footer.module';
 import { HeaderModule } from 'src/header/header.module';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { SidebarModule } from 'src/sidebar/sidebar.module';
-import { ProductModule } from 'src/product/product.module';
+import { CartModule } from 'src/cart/cart.module';
 
 @NgModule({
   declarations: [MainComponent, HomeComponent],
@@ -30,7 +30,8 @@ import { ProductModule } from 'src/product/product.module';
     FooterModule,
     HeaderModule,
     MatSidenavModule,
-    SidebarModule
+    SidebarModule,
+    CartModule
   ],
   bootstrap:[MainComponent]
 })

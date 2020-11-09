@@ -11,13 +11,16 @@ export class HeaderComponent implements OnInit {
   @Output("navToggleEvent")
   public navToggleEvent: EventEmitter<boolean>;
 
+  @Output("viewCartEvent")
+  public viewCartEvent: EventEmitter<boolean>;
+
   public menuIcon: IconDefinition = faBars;
   public searchIcon: IconDefinition = faSearch;
   public cartIcon: IconDefinition = faShoppingCart;
-  public toggleState: boolean = false;
 
   constructor() {
-    this.navToggleEvent = new EventEmitter<boolean>(this.toggleState);
+    this.navToggleEvent = new EventEmitter<boolean>(false);
+    this.viewCartEvent = new EventEmitter<boolean>(false);
   }
 
   ngOnInit(): void {
@@ -25,8 +28,11 @@ export class HeaderComponent implements OnInit {
   }
 
   public onNavToggle(): void {
-    this.toggleState = !this.toggleState;
-    this.navToggleEvent.emit(this.toggleState);
+    this.navToggleEvent.emit(false);
+  }
+
+  public onCartToggle(): void {
+    this.viewCartEvent.emit(false);
   }
 
 }

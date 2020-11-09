@@ -1,0 +1,20 @@
+<div class="row col-12 p-2 m-0">
+    <img class="cart-product-img pr-2" src="{{product.img.src}}" alt="{{product.img.alt}}">
+
+    <div class="cart-product-details pl-2">
+        <p class="col-12 p-0 pb-2 m-0 cart-product-name" (click)="onProductClick(product.id)">{{product.name}}</p>
+        <p class="col-12 p-0 pb-2 m-0 cart-product-selector">{{product.selector}}</p>
+        <div class="col-12 p-0 m-0 cart-product-quantity">
+
+            <fa-icon class="p-1 m-0 cart-quantity-btn" [icon]="minusIcon"></fa-icon>
+
+            <p class="d-inline p-0 px-2 m-0">{{product.quantity}}</p>
+
+            <fa-icon class="p-1 m-0 cart-quantity-btn" [icon]="addIcon"></fa-icon>
+
+            <p class="d-inline float-right p-0 m-0">{{product.currency}}{{product.price}}</p>
+
+        </div>
+
+    </div>
+</div>

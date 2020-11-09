@@ -1,0 +1,30 @@
+.cart-product-img {
+    height : 80px;
+    width: 20%;
+}
+
+.cart-product-details {
+    width: 80%;
+}
+
+.cart-product-name {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.cart-product-selector {
+    font-size: 14px;
+}
+
+.cart-product-quantity {
+    font-size: 14px;
+}
+
+.cart-quantity-btn {
+    border-radius: 5px;
+}
+
+.cart-quantity-btn:hover{
+    background-color:lightgray;
+    transition: 500ms;
+}

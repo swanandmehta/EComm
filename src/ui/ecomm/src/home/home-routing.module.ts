@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ShowcaseModule } from 'src/showcase/showcase.module';
 import { HomeComponent } from './component/home/home.component';
 
 const routes: Routes = [
@@ -21,12 +22,12 @@ const routes: Routes = [
   {
     path: "showcase/:showcase",
     pathMatch: "full",
-    loadChildren: () => import("src/product/product.module").then(module => module.ProductModule)
+    loadChildren: () => ShowcaseModule
   },
   {
     path: "showcase/:showcase/tag/:tag",
     pathMatch: "full",
-    loadChildren: () => import("src/product/product.module").then(module => module.ProductModule)
+    loadChildren: () => ShowcaseModule
   }
 ];
 

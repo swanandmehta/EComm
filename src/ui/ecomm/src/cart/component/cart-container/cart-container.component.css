@@ -1,0 +1,9 @@
+#cart {
+    width: 25vw;
+}
+
+#cart-checkout {
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+}

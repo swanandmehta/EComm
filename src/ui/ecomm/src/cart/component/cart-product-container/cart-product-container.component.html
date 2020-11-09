@@ -1,0 +1,3 @@
+<div class="col-12 p-0 m-0">
+    <app-cart-product *ngFor="let product of cart.products" (onProductSelect)="close()" [product]="product"></app-cart-product>
+</div>

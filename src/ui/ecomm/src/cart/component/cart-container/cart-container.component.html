@@ -1,0 +1,16 @@
+<div id="cart" class="col-12 px-2 pt-2 pb-0">
+    <div class="row p-0 py-2 m-0">
+        <p class="col-12 p-0 m-0 text-right">
+            <fa-icon class="d-inline fa-2x" [icon]="closeIcon" (click)="onClose()"></fa-icon>
+        </p>
+    </div>
+
+    <div class="p-0 py-2 pb-0 m-0">
+        <app-cart-product-container (onProductSelect)="onClose()" [cart]="cart"></app-cart-product-container>
+    </div>
+
+    <div id="cart-checkout" class="p-0 py-2 m-0">
+        <app-cart-checkout [cart]="cart"></app-cart-checkout>
+    </div>
+
+</div>

@@ -1,0 +1,18 @@
+.checkout-total {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.checkout-total-price {
+    font-size: 18px;
+}
+
+.checkout-btn {
+    font-size: 18px;
+    font-weight: 800;
+    outline: none;
+}
+
+.checkout-note {
+    font-size: 12px;
+}

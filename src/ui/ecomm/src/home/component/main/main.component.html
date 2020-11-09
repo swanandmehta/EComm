@@ -1,10 +1,13 @@
 <div class="container-fluid p-0">
     <mat-sidenav-container>
-        <mat-sidenav #sideNav [opened]="false" [fixedInViewport]="true">
+        <mat-sidenav #sideNav [opened]="false" [fixedInViewport]="true" position="start">
             <app-sidebar-container (navCloseEvent)="sideNav.toggle()"></app-sidebar-container>
         </mat-sidenav>
+        <mat-sidenav #cart [opened]="false" [fixedInViewport]="true" position="end">
+            <app-cart-container (cartCloseEvent)="cart.toggle()"></app-cart-container>
+        </mat-sidenav>
         <mat-sidenav-content>
-            <app-header (navToggleEvent)="sideNav.toggle()"></app-header>
+            <app-header (navToggleEvent)="sideNav.toggle()" (viewCartEvent)="cart.toggle()"></app-header>
             <router-outlet></router-outlet>
             <app-footer></app-footer>
         </mat-sidenav-content>
