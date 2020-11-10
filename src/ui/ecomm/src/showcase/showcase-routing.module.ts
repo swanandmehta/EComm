@@ -4,7 +4,13 @@ import { ShowcaseComponent } from './component/showcase/showcase.component';
 
 const routes: Routes = [
   {
-    path: "",
+    path: ":showcase",
+    pathMatch: "full",
+    component: ShowcaseComponent
+  },
+  {
+    path: ":showcase/tag/:tag",
+    pathMatch: "full",
     component: ShowcaseComponent
   }
 ];

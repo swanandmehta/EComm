@@ -4,7 +4,8 @@ import { ProductComponent } from 'src/product/component/product/product.componen
 
 const routes: Routes = [
   {
-    path: "",
+    path: ":id",
+    pathMatch: "full",
     component: ProductComponent
   }
 ];

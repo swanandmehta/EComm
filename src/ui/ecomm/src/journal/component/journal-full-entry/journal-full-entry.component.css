@@ -1,0 +1,25 @@
+.journal-title {
+    font-size: 26px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.journal-subheading {
+    font-size: 14px;
+    font-weight: 500;
+    color: darkgray;
+}
+
+.journal-img {
+    border-radius: 25px;
+}
+
+.journal-text {
+    font-size: 18px;
+}
+
+.journal-source {
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}

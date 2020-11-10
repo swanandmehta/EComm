@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ShowcaseModule } from 'src/showcase/showcase.module';
 import { HomeComponent } from './component/home/home.component';
 
 const routes: Routes = [
@@ -15,19 +14,14 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    path: "product/:id",
-    pathMatch: "full",
+    path: "product",
+    pathMatch: "prefix",
     loadChildren: () => import("src/product/product.module").then(module => module.ProductModule)
   },
   {
-    path: "showcase/:showcase",
-    pathMatch: "full",
-    loadChildren: () => ShowcaseModule
-  },
-  {
-    path: "showcase/:showcase/tag/:tag",
-    pathMatch: "full",
-    loadChildren: () => ShowcaseModule
+    path: "showcase",
+    pathMatch: "prefix",
+    loadChildren: () => import("src/showcase/showcase.module").then(module => module.ShowcaseModule)
   },
   {
     path: "login",
@@ -43,6 +37,11 @@ const routes: Routes = [
     path: "recover",
     pathMatch: "full",
     loadChildren: () => import("src/recover/recover.module").then(module => module.RecoverModule)
+  },
+  {
+    path: "journal",
+    pathMatch: "prefix",
+    loadChildren: () => import("src/journal/journal.module").then(module => module.JournalModule)
   }
 ];
 
