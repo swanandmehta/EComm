@@ -1,0 +1,19 @@
+<div id="checkout" class="row justify-content-center p-0 m-0">
+    <div class="col-9 row p-0 m-0">
+        <div class="col-6 p-0 m-0 ">
+
+            <img class="col-3 p-0 m-0 logo-height" src="../../../assets/img/logo-header.png" alt="logo" />
+
+            <app-checkout-steps></app-checkout-steps>
+
+            <router-outlet></router-outlet>
+
+        </div>
+
+        <div class="col-6 p-0 pl-3 m-0">
+            <app-checkout-cart [productList]="productList"></app-checkout-cart>            
+            <app-checkout-cart-total [productList]="productList"></app-checkout-cart-total>
+        </div>
+
+    </div>
+</div>

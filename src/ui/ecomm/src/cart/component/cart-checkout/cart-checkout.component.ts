@@ -1,4 +1,5 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Router } from '@angular/router';
 import { Cart } from 'src/cart/common/dto/Cart/cart';
 
 @Component({
@@ -10,10 +11,21 @@ export class CartCheckoutComponent implements OnInit {
 
   @Input("cart")
   public cart: Cart;
+
+  @Output("onCheckoutClick")
+  public onCheckoutClick: EventEmitter<boolean>;
   
-  constructor() { }
+  constructor(private router: Router) {
+    this.onCheckoutClick = new EventEmitter<boolean>();
+  }
 
   ngOnInit(): void {
+
+  }
+
+  public checkout(): void {
+    this.router.navigateByUrl("/checkout");
+    this.onCheckoutClick.emit(false);
   }
 
 }

@@ -4,7 +4,7 @@
 @import "assets/style/scrollbar.css";
 @import "assets/style/textcolor.css";
 @import "assets/style/default.css";
+@import "assets/style/angular.material.overdiding.css";
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
-

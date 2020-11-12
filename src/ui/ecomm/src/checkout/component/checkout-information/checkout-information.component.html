@@ -1,0 +1,190 @@
+<form [formGroup]="contactForm">
+    <div class="row p-0 m-0">
+
+        <div class="w-100 p-0 m-0 py-3 ">
+
+            <div class="col-12 p-0 m-0 py-1 d-inline">
+                <p class="p-0 m-0 category-title float-left">Contact information</p>
+                <p class="p-0 m-0 category-title float-right">Already have account? <u>Log in</u></p>
+            </div>
+
+            <div formGroupName="personal" class="col-12 p-0 m-0">
+                <mat-form-field class="w-100">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput formControlName="email" placeholder="Ex. username@domain.com">
+                    <mat-error
+                        *ngIf="personalForm.controls.email.hasError('email') && !personalForm.controls.email.hasError('required')">
+                        Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="personalForm.controls.email.hasError('required')">
+                        Email is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div formGroupName="personal" class="col-12 p-0 m-0">
+                <mat-form-field class="w-100">
+                    <mat-label>Phone</mat-label>
+                    <input type="tel" matInput formControlName="phone" placeholder="Ex. 123 123 1234">
+                    <mat-error
+                        *ngIf="personalForm.controls.phone.hasError('email') && !personalForm.controls.phone.hasError('required')">
+                        Please enter a valid contact no.
+                    </mat-error>
+                    <mat-error *ngIf="personalForm.controls.phone.hasError('required')">
+                        Contact no is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="col-12 p-0 m-0">
+                <mat-checkbox class="w-100" color="primary" formControlName="newsletter">Keep me up to date on news and
+                    exclusive offers</mat-checkbox>
+            </div>
+
+        </div>
+
+        <div class="w-100 p-0 m-0 py-3 ">
+
+            <p class="col-12 p-0 m-0 category-title float-left">Shipping address</p>
+
+            <div formGroupName="personal" class="col-12 p-0 m-0">
+                <mat-form-field class="col-6 p-0 pr-1 m-0">
+                    <mat-label>First Name</mat-label>
+                    <input type="text" matInput formControlName="firstName" placeholder="Ex. John">
+                    <mat-error
+                        *ngIf="personalForm.controls.firstName.hasError('email') && !personalForm.controls.firstName.hasError('required')">
+                        Please enter a valid first name
+                    </mat-error>
+                    <mat-error *ngIf="personalForm.controls.firstName.hasError('required')">
+                        First name is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="col-6 p-0 pl-1 m-0">
+                    <mat-label>Last Name</mat-label>
+                    <input type="email" matInput formControlName="lastName" placeholder="Ex. Smith">
+                    <mat-error
+                        *ngIf="personalForm.controls.lastName.hasError('email') && !personalForm.controls.lastName.hasError('required')">
+                        Please enter a valid last name
+                    </mat-error>
+                    <mat-error *ngIf="personalForm.controls.lastName.hasError('required')">
+                        Last name is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div formGroupName="address" class="col-12 p-0 m-0">
+                <mat-form-field class="w-100">
+                    <mat-label>Address</mat-label>
+                    <input type="text" matInput formControlName="address" placeholder="Address">
+                    <mat-error
+                        *ngIf="addressForm.controls.address.hasError('email') && !addressForm.controls.address.hasError('required')">
+                        Please enter a valid address
+                    </mat-error>
+                    <mat-error *ngIf="addressForm.controls.address.hasError('required')">
+                        Address is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div formGroupName="address" class="col-12 p-0 m-0">
+                <mat-form-field class="w-100">
+                    <mat-label>Address, suite, landmark, etc (optional)</mat-label>
+                    <input type="text" matInput formControlName="landmark"
+                        placeholder="Address, suite, landmark, etc (optional)">
+                    <mat-error
+                        *ngIf="addressForm.controls.landmark.hasError('email') && !addressForm.controls.landmark.hasError('required')">
+                        Please enter a valid address
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div formGroupName="address" class="col-12 p-0 m-0">
+                <mat-form-field class="w-100">
+                    <mat-label>City</mat-label>
+                    <input type="text" matInput formControlName="city" placeholder="Ex. New York">
+                    <mat-error
+                        *ngIf="addressForm.controls.city.hasError('email') && !addressForm.controls.city.hasError('required')">
+                        Please enter a City
+                    </mat-error>
+                    <mat-error *ngIf="addressForm.controls.city.hasError('required')">
+                        City is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="col-12 p-0 m-0" formGroupName="address">
+
+                <mat-form-field class="col-4 p-0 m-0 pr-1">
+                    <mat-label>Country</mat-label>
+                    <input type="text" matInput formControlName="country" placeholder="Ex. United State"
+                        [matAutocomplete]="country">
+                    <mat-autocomplete #country="matAutocomplete">
+                        <mat-option *ngFor="let option of countryList | async" [value]="option">
+                            {{option}}
+                        </mat-option>
+                    </mat-autocomplete>
+                    <mat-error
+                        *ngIf="addressForm.controls.country.hasError('email') && !addressForm.controls.country.hasError('required')">
+                        Please select valid country
+                    </mat-error>
+                    <mat-error *ngIf="addressForm.controls.country.hasError('required')">
+                        City is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="col-4 p-0 m-0 pr-1">
+                    <mat-label>State</mat-label>
+                    <input type="text" matInput formControlName="state" placeholder="Ex. New York"
+                        [matAutocomplete]="state">
+                    <mat-autocomplete #state="matAutocomplete">
+                        <mat-option *ngFor="let option of stateList | async" [value]="option">
+                            {{option}}
+                        </mat-option>
+                    </mat-autocomplete>
+                    <mat-error
+                        *ngIf="addressForm.controls.state.hasError('email') && !addressForm.controls.state.hasError('required')">
+                        Please select valid state
+                    </mat-error>
+                    <mat-error *ngIf="addressForm.controls.state.hasError('required')">
+                        State is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="col-4 p-0 m-0">
+                    <mat-label>Zipcode</mat-label>
+                    <input type="text" matInput formControlName="zipcode" placeholder="Ex. 10001"
+                        [matAutocomplete]="zipcode">
+                    <mat-autocomplete #zipcode="matAutocomplete">
+                        <mat-option *ngFor="let option of zipcodeList | async" [value]="option">
+                            {{option}}
+                        </mat-option>
+                    </mat-autocomplete>
+                    <mat-error
+                        *ngIf="addressForm.controls.zipcode.hasError('email') && !addressForm.controls.zipcode.hasError('required')">
+                        Please enter a valid zipcode
+                    </mat-error>
+                    <mat-error *ngIf="addressForm.controls.zipcode.hasError('required')">
+                        Zipcode is <strong>required</strong>
+                    </mat-error>
+                </mat-form-field>
+            </div>
+
+            <div class="col-12 p-0 m-0">
+                <mat-checkbox class="w-100" color="primary" formControlName="saveAddress"> Save this information for
+                    next
+                    time</mat-checkbox>
+            </div>
+
+        </div>
+
+        <div class="w-100 p-0 m-0 py-3 ">
+
+            <button class="btn float-left" mat-raised-button (click)="navigateToHome()">Return to home</button>
+
+            <button class="btn float-right" mat-raised-button color="primary" (click)="navigateToShipping()">Continue to shipping</button>
+
+        </div>
+
+    </div>
+</form>

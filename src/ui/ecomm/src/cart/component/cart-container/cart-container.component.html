@@ -10,7 +10,7 @@
     </div>
 
     <div id="cart-checkout" class="p-0 py-2 m-0">
-        <app-cart-checkout [cart]="cart"></app-cart-checkout>
+        <app-cart-checkout (onCheckoutClick)="onClose()" [cart]="cart"></app-cart-checkout>
     </div>
 
 </div>

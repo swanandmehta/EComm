@@ -4,6 +4,7 @@ import { Product } from 'src/product/common/dto/Product/product';
 import { Selector } from 'src/product/common/interface/selector';
 import { startWith, map } from 'rxjs/operators'
 import { ProductSelector } from 'src/product/common/dto/ProductSelector/product-selector';
+import { ProductSelectorOption } from 'src/product/common/dto/ProductSelectorOption/product-selector-option';
 
 @Component({
   selector: 'app-product-sizing',
@@ -27,13 +28,12 @@ export class ProductSizingComponent implements OnInit {
       const control: FormControl = new FormControl('', []);
       this.form.addControl(selector.name, control);
       this.options[selector.name] = control.valueChanges.pipe(
-        startWith(''),
         map(value => this.filter(value, selector))
       );
     }
   }
 
-  private filter(value: string, selector: ProductSelector) {
+  private filter(value: string, selector: ProductSelector): ProductSelectorOption[] {
     return selector.options.filter((s) => new RegExp(value, 'gi').test(s.display));
   }
 

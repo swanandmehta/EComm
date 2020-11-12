@@ -1,0 +1,19 @@
+<div class="row col-12 p-0 py-3 m-0">
+    <div class="p-0 m-0">
+        <p class="p-0 pr-2 m-0 d-inline step" (click)="onNavigate('information')"
+            [ngClass]="{'active-step' : step == 'information'}">Information</p>
+        <fa-icon class="p-0 pr-2 m-0 step-icon d-inline" [icon]="nextIcon"></fa-icon>
+    </div>
+
+    <div class="p-0 m-0">
+        <p class="p-0 pr-2 m-0 d-inline step" (click)="onNavigate('shipping')"
+            [ngClass]="{'active-step' : step == 'shipping'}">Shipping</p>
+        <fa-icon class="p-0 pr-2 m-0 step d-inline" [icon]="nextIcon"></fa-icon>
+    </div>
+
+    <div class="p-0 m-0">
+        <p class="p-0 pr-2 m-0 d-inline step" (click)="onNavigate('payment')"
+            [ngClass]="{'active-step' : step == 'payment'}">Payment</p>
+    </div>
+
+</div>

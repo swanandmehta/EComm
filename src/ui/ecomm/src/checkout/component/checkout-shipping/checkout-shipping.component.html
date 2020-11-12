@@ -1,0 +1,63 @@
+<div class="row col-12 p-0 m-0">
+
+    <div class="col-12 p-0 py-2 m-0">
+        <div class="col-12 p-0 m-0 ">
+            <p class="p-0 m-0 py-2 info-title float-left">Contact</p>
+            <p class="p-0 m-0 py-2 info-title-nav float-right" (click)="navigateToInformation()">Change</p>
+        </div>
+
+        <div class="row col-12 p-0 m-0">
+            <p class="col-12 p-0 m-0 info">
+                {{personal.firstName}} {{personal.lastName}}
+            </p>
+            <p class="col-12 p-0 m-0 info">
+                {{personal.email}}
+            </p>
+            <p class="col-12 p-0 m-0 info">
+                {{personal.phone}}
+            </p>
+        </div>
+    </div>
+
+
+    <div class="col-12 p-0 py-2 m-0">
+        <div class="col-12 p-0 m-0 ">
+            <p class="p-0 m-0 py-2 info-title float-left">Ship To</p>
+            <p class="p-0 m-0 py-2 info-title-nav float-right" (click)="navigateToInformation()">Change</p>
+        </div>
+
+        <div class="row col-12 p-0 m-0">
+            <p class="col-12 p-0 m-0 info">
+                {{address.address}}
+            </p>
+
+            <p class="col-12 p-0 m-0 info" *ngIf="address.landmark != ''">
+                {{address.landmark}}
+            </p>
+
+            <p class="col-12 p-0 m-0 info">
+                {{address.city}}, {{address.state}}, {{address.country}}, {{address.zipcode}}
+            </p>
+        </div>
+    </div>
+
+    <div class="col-12 p-0 py-2 m-0">
+        <p class="p-0 m-0 py-2 info-title">Shipping method</p>
+        <mat-radio-group>
+            <mat-radio-button *ngFor="let type of shippingOptions" class="col-12 p-0 py-1 m-0" color="primary"
+                [value]="type.id">
+                <p class="p-0 m-0 d-inline">{{type.name}}</p>
+                <p class="p-0 m-0 d-inline float-right">{{type.currency}}{{type.price}}</p>
+            </mat-radio-button>
+        </mat-radio-group>
+    </div>
+
+    <div class="w-100 p-0 m-0 py-3 ">
+
+        <button class="btn float-left" mat-raised-button (click)="navigateToInformation()">Return to information</button>
+
+        <button class="btn float-right" mat-raised-button color="primary" (click)="navigateToPayment()">Continue to payment</button>
+
+    </div>
+
+</div>

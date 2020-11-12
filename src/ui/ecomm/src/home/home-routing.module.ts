@@ -42,6 +42,11 @@ const routes: Routes = [
     path: "journal",
     pathMatch: "prefix",
     loadChildren: () => import("src/journal/journal.module").then(module => module.JournalModule)
+  },
+  {
+    path: "checkout",
+    pathMatch: "prefix",
+    loadChildren: () => import("src/checkout/checkout.module").then(module => module.CheckoutModule)
   }
 ];
 

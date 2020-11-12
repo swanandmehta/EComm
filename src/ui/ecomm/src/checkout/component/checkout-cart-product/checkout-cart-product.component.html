@@ -1,0 +1,16 @@
+<div class="row col-12 p-0 pt-3 m-0">
+    <div class="cart-product-img-container" [matBadge]="product.quantity">
+        <img class="cart-product-img" [src]="product.img.src" [alt]="product.img.alt">
+    </div>
+
+    <div class="cart-product-details pl-4">
+        <p class="col-12 p-0 pb-2 m-0 cart-product-name">{{product.name}}</p>
+        <p class="col-12 p-0 pb-2 m-0 cart-product-selector">{{product.selector}}</p>
+        <div class="col-12 p-0 m-0 cart-product-quantity">
+
+            <p class="d-inline float-right p-0 m-0">{{product.currency}}{{product.price}}</p>
+
+        </div>
+
+    </div>
+</div>
