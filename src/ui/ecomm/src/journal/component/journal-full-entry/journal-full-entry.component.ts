@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { IconDefinition, faCircle } from '@fortawesome/free-solid-svg-icons';
 import { JournalEntryFull } from 'src/journal/common/dto/JournalEntryFull/journal-entry-full';
 import { JournalImg } from 'src/journal/common/dto/JournalImg/journal-img';
@@ -17,7 +16,7 @@ export class JournalFullEntryComponent implements OnInit {
   public entry: JournalEntryFull;
   public circleIcon: IconDefinition = faCircle;
 
-  constructor(private activeRouter: ActivatedRoute) {
+  constructor() {
     const img1: JournalImg = new JournalImg("../../../assets/img/banner1.jpg", "Img1");
     const text: string = "Linen is a textile made from the fibers of the flax plant, Linum usitatissimum. Linen is laborious to manufacture, but the fiber is very absorbent and garments made of linen are valued for their exceptional coolness and freshness in hot weather.\n\nMany products are made of linen: aprons, bags, towels (swimming, bath, beach, body and wash towels), napkins, bed linens, tablecloths, runners, chair covers, and men's and women's wear. Linen is a textile made from the fibers of the flax plant, Linum usitatissimum. Linen is laborious to manufacture, but the fiber is very absorbent and garments made of linen are valued for their exceptional coolness and freshness in hot weather.\n\nMany products are made of linen: aprons, bags, towels (swimming, bath, beach, body and wash towels), napkins, bed linens, tablecloths, runners, chair covers, and men's and women's wear.";
     const s1: JournalSocial = new JournalSocial(Social.FB, "");

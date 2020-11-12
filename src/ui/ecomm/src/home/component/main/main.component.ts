@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ShowcaseConfig } from 'src/showcase/common/dto/ShowcaseConfig/showcase-config';
 
 @Component({
   selector: 'app-main',
@@ -13,10 +12,6 @@ export class MainComponent implements OnInit {
   }
 
   ngOnInit(): void {
-  }
-
-  test(test): void {
-    console.log(test);
   }
 
 }

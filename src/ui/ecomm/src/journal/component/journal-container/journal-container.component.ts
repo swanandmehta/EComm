@@ -1,9 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { JournalEntry } from 'src/journal/common/dto/JournalEntry/journal-entry';
 import { JournalImg } from 'src/journal/common/dto/JournalImg/journal-img';
-import { JournalSocial } from 'src/journal/common/dto/JournalSocial/journal-social';
-import { JournalSource } from 'src/journal/common/dto/JournalSource/journal-source';
-import { Social } from 'src/journal/common/enum/social';
 
 @Component({
   selector: 'app-journal-container',

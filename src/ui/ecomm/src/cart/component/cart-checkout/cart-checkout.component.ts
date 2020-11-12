@@ -17,6 +17,7 @@ export class CartCheckoutComponent implements OnInit {
   
   constructor(private router: Router) {
     this.onCheckoutClick = new EventEmitter<boolean>();
+    this.cart = new Cart(null, null, null);
   }
 
   ngOnInit(): void {

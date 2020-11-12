@@ -12,7 +12,7 @@ export class RegisterContainerComponent implements OnInit {
   public registerForm: FormGroup;
 
   constructor(private router: Router, private formBuilder: FormBuilder) {
-    this.registerForm = formBuilder.group({
+    this.registerForm = this.formBuilder.group({
       firstName: [],
       lastName: [],
       email: [],

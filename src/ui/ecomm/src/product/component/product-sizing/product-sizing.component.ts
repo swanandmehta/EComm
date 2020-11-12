@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Product } from 'src/product/common/dto/Product/product';
 import { Selector } from 'src/product/common/interface/selector';
-import { startWith, map } from 'rxjs/operators'
+import { map } from 'rxjs/operators'
 import { ProductSelector } from 'src/product/common/dto/ProductSelector/product-selector';
 import { ProductSelectorOption } from 'src/product/common/dto/ProductSelectorOption/product-selector-option';
 

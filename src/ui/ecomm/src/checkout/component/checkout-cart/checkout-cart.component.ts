@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Product } from 'src/checkout/common/dto/Product/product';
-import { ProductImg } from 'src/checkout/common/dto/ProductImg/product-img';
 
 @Component({
   selector: 'app-checkout-cart',

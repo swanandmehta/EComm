@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/product/common/dto/Product/product';
 import { ProductImg } from 'src/product/common/dto/ProductImg/product-img';
 import { ProductSelector } from 'src/product/common/dto/ProductSelector/product-selector';
@@ -16,7 +15,7 @@ export class ProductComponent implements OnInit {
 
   public product: Product;
 
-  constructor(private activeRoute: ActivatedRoute) {
+  constructor() {
     const pImg1: ProductImg = new ProductImg("../../../assets/img/product1.jpg");
     const pImg2: ProductImg = new ProductImg("../../../assets/img/product2.jpg");
     const pImg3: ProductImg = new ProductImg("../../../assets/img/product3.jpg");
